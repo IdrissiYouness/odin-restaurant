@@ -1,7 +1,7 @@
 import "./styles.css";
 import loadHome from "./home";
 import loadAbout from "./about";
-
+import loadMenu from "./menu";
 
 
 const navBtns = document.querySelectorAll("button");
@@ -21,10 +21,15 @@ navBtns.forEach((button)=>{
         if(btnId === "menu"){
 
             console.log("Menu Loaded");
+            loadMenu(contentHolder);
+
         }else if(btnId === "about"){
+
             console.log("About Loaded");
             loadAbout(contentHolder);
+
         }else{
+
             console.log("Home Loaded");
             loadHome(contentHolder);
         }
